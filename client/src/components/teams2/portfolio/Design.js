@@ -60,7 +60,7 @@ const Design = () => {
 
   return (
     <div>
-      <Department tag="Research And Development" />
+      <Department tag="Design Team" />
       <div className="btn">
         <div className="flex mt-6  justify-end">
           <button

@@ -60,7 +60,7 @@ const Field = () => {
 
   return (
     <div>
-      <Department tag="Research And Development" />
+      <Department tag="Field Officer" />
       <div className="btn">
         <div className="flex mt-6  justify-end">
           <button

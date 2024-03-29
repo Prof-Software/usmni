@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import Template from "./Template";
 import Department from "./Department";
-import { getContentTeam } from "../../../services/index";
+import { getRadTeam } from "../../../services/index";
 
-const Content = () => {
+const Research = () => {
   const [val, setVal] = useState(true);
   const [webTeam, setWebTeam] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ const Content = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const teamData = await getContentTeam();
+        const teamData = await getRadTeam();
         setWebTeam(teamData);
         setFilteredMembers(teamData[0].node.teamMembers.filter(member => !member.alumni)); // Filter only present team members initially
         setLoading(false);
@@ -98,4 +98,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Research;

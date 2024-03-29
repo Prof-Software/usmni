@@ -21,7 +21,7 @@ const Selection = () => {
                     </div>
 
                     <div className="m-6 hover:underline hover:cursor-pointer hover:bg-opacity-100 rounded-xl hover:bg-slate-300 shadow-xl">
-                        <Link to="/reserchAndDevelopment">
+                        <Link to="/researchAndDevelopment">
                             <img src={Reserach} className="h-auto w-auto" />
                             <h1 className='my-2 md:text-xl '>RESEARCH AND DEVELOPMENT TEAM</h1>
                         </Link>

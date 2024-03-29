@@ -12,7 +12,7 @@ import Web from './components/teams2/portfolio/Web';
 import Field from './components/teams2/portfolio/Field';
 import Design from './components/teams2/portfolio/Design';
 import Content from './components/teams2/portfolio/Content';
-import Reserch from './components/teams2/portfolio/Reserch';
+import Reserch from './components/teams2/portfolio/Research';
 
 // import Gallery from './components/Page';
 
@@ -31,7 +31,7 @@ function App() {
           <Route path='/gallery' Component={SliderComponent} />
           <Route path='/marketingAndSponcership' element={<Marketing />} />
         <Route path='/webTeam' element={<Web />} />
-        <Route path='/reserchAndDevelopment' element={<Reserch />} />
+        <Route path='/researchAndDevelopment' element={<Reserch />} />
         <Route path='/fieldOfficer' element={<Field />} />
         <Route path='/contentDepartment' element={<Content />} />
         <Route path='/designDepartment' element={<Design />} />

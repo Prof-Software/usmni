@@ -1,5 +1,5 @@
 .carousel-container {
-    height: 70vh;
+  
     /* 80% of viewport height */
 }
 /* width */
@@ -9,12 +9,12 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #fff;
+    background: #797979;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: #FEC415;
   }
   
   /* Handle on hover */

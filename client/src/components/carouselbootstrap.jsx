@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
+import Bg from "../assets/Final-Round-2.png";
+import AboutUsPage from './aboutus/aboutus';
+import SetPage from './SetPage';
+import SliderComponent from './Gallery';
+import Selection from './teams2/Selection';
 const Carousel = () => {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,20 +50,23 @@ const Carousel = () => {
     );
   };
   const prevSlide = () => {
-    setCurrentSlide(
-      currentSlide !== 0 ? currentSlide - 1 : 0
-    );
+    setCurrentSlide(currentSlide !== 0 ? currentSlide - 1 : 0);
   };
 
-  console.log(currentSlide)
+  console.log(currentSlide);
   return (
-    <div className="flex h-[95vh] items-center justify-center flex-col">
+    <div className="flex mt-14 items-center justify-center flex-col" id="team">
       <div className="w-full flex items-center justify-center gap-5">
-      <button className=" cursor-pointer hidden md:block  bg-white rounded-full shadow-lg p-2 z-20"  >
-        <FaChevronLeft onClick={()=>{prevSlide()}} size={40} />
-      </button>
-      
-        <div className="carousel-container w-[100%] md:w-1/2 bg-gray-500 ">
+        <button className=" cursor-pointer text-gray-400  hidden md:block  bg-white rounded-full shadow-lg p-2 z-20">
+          <FaChevronLeft
+            onClick={() => {
+              prevSlide();
+            }}
+            size={40}
+          />
+        </button>
+
+        <div className="carousel-container w-[100%] md:w-2/3 h-[600px] bg-gray-500 ">
           <div className="carousel ">
             {slides.map((slide, index) => (
               <img
@@ -80,19 +87,37 @@ const Carousel = () => {
             ))}
           </div>
         </div>
-        <button className="hidden cursor-pointer md:block  bg-white rounded-full shadow-lg p-2 z-20"  >
-        <FaChevronRight onClick={()=>{nextSlide()}} size={40} />
-      </button>
-      <div className="hidden w-[30%] gap-2 md:flex items-center mt-4 justify-center flex-col text-center">
-        <h1 className="text-7xl">NIT Allahbad Enactus</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicinbg elit. Nobis architecto, ipsum error corporis expedita sunt incidunt voluptatibus accusantium aut debitis voluptate nostrum repellendus aperiam harum beatae quisquam distinctio tempore placeat!</p>
-        <a href={"/about"} className="bg-[#FFC222] font-bold rounded-lg p-3 text-white">Learn More</a>
-
-      </div>
+        <button className="hidden cursor-pointer text-gray-400 md:block  bg-white rounded-full shadow-lg p-2 z-20">
+          <FaChevronRight
+            onClick={() => {
+              nextSlide();
+            }}
+            size={40}
+          />
+        </button>
       </div>
       <div className="flex md:hidden items-center mt-4 justify-center text-center">
         <h1 className="text-7xl">NIT Allahbad Enactus</h1>
       </div>
+      <div className="hidden md:flex mt-14 mb-7  items-center justify-center gap-9" style={{ backgroundImage: `url(${Bg})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100%', height: '50vh' }}>
+        <img src="https://scontent.fdel25-2.fna.fbcdn.net/v/t39.30808-6/302478637_455589929918816_1569535897626458244_n.jpg?stp=dst-jpg_p600x600&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=x5ZZifSySzIAX_nZ80j&_nc_ht=scontent.fdel25-2.fna&oh=00_AfBkvuQzgqmip_bVyb-LPBsnv9zQzrxHyB6qjW07gRyMxQ&oe=660F179E" alt="mnnit allahbad" className="w-[500px] shadow-xl rounded-md h-[300px] object-cover" />
+        <div className="hidden w-[30%] gap-2 md:flex items-center mt-4 justify-center flex-col text-center">
+          <h1 className="text-7xl text-gray-700">NIT Allahbad Enactus</h1>
+          <p className="text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicinbg elit. Nobis
+            architecto, ipsum error corporis expedita sunt incidunt voluptatibus
+            accusantium aut debitis voluptate nostrum repellendus aperiam harum
+            beatae quisquam distinctio tempore placeat!
+          </p>
+          <a
+            href={"/about"}
+            className="bg-[#FFC222] font-bold rounded-lg p-3 text-black w-[300px] mt-4"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+        <AboutUsPage/>
     </div>
   );
 };

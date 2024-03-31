@@ -9,7 +9,7 @@ import Fild from './photos/section/field.jpg'
 
 const Selection = () => {
     return (
-        <div>
+        <div >
             <div className="container mx-auto my-6 text-center">
                 <div className="grid lg:grid-cols-3 gap-4  text-center text-lg sm:grid-cols-2 ">
 
